@@ -13,4 +13,14 @@ class HomeActivityModule {
             : HomeViewModel {
         return HomeViewModel(dataManager, schedulerProvider)
     }
+
+    @Provides
+    fun provideSourcesAdapter(dataManager: DataManager): SourcesAdapter {
+        return SourcesAdapter(dataManager, dataManager.context)
+    }
+
+    @Provides
+    fun provideNewsAdapter(dataManager: DataManager): AllNewsAdapter {
+        return AllNewsAdapter(dataManager, dataManager.context)
+    }
 }
