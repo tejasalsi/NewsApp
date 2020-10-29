@@ -33,6 +33,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "1.0"
+    productFlavors {
+        //you can have various flavors here like production, stage
+        develop {
+            versionCode 1
+            versionName "1.0.0"
+            buildConfigField("String", "BASEURL", "\"https://newsapi.org/v2/\"")
+        }
+    }
 }
 
 dependencies {
