@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.news.newsapp.R
 import com.news.newsapp.base.BaseFragment
+import com.news.newsapp.model.AllNewsResponse
 import com.news.newsapp.model.SourcesResponse
 import kotlinx.android.synthetic.main.fragment_sources.*
 import retrofit2.Response
@@ -39,6 +40,10 @@ class SourcesFragment: BaseFragment<HomeViewModel>(), HomeNavigator {
     override fun sourceResult(sourcesResponse: Response<SourcesResponse>) {
         sourcesAdapter.addItems(sourcesResponse.body()!!.sources)
         setupViews()
+    }
+
+    override fun newsResult(allNewsResponse: Response<AllNewsResponse>) {
+
     }
 
     override fun setupViews() {

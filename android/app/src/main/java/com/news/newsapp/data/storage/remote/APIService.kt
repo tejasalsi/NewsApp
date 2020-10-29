@@ -25,4 +25,8 @@ class APIService {
     fun getHeadLines(sources: String): Observable<Response<AllNewsResponse>> {
         return mApiHelper.getHeadLines("top-headlines", sources)
     }
+
+    fun getAllNews(newsPhrase: String, page: Int): Observable<Response<AllNewsResponse>> {
+        return mApiHelper.getAllNews("everything", newsPhrase, page)
+    }
 }

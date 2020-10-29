@@ -22,4 +22,11 @@ interface APIHelper {
         @Query("sources") source: String
     ): Observable<Response<AllNewsResponse>>
 
+    @GET
+    fun getAllNews(
+        @Url url: String,
+        @Query("q") newsPhrase: String,
+        @Query("page") page: Int
+    ): Observable<Response<AllNewsResponse>>
+
 }

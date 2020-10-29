@@ -29,6 +29,20 @@ class HomeViewModel(dataManager: DataManager, schedulerProvider: SchedulerProvid
 
         }, {
             error ->
+            //Do error handling
+        }))
+    }
+
+    fun getAllNews(page: Int) {
+        compositeDisposable.add(dataManager.apiService.getAllNews("+news", page).subscribeOn(schedulerProvider.io()).observeOn(schedulerProvider.ui()).subscribe({
+                newsResponse ->
+            if(newsResponse.code() == SUCCESS) {
+                homeNavigator!!.newsResult(newsResponse)
+            }
+
+        }, {
+                error ->
+            //Do error handling
         }))
     }
 }
