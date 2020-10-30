@@ -2,6 +2,8 @@ package com.news.newsapp.utils
 
 
 const val PREF_NAME = "FitnessPrefs"
+const val ALL_NEWS = "allNewsFragment"
+const val SOURCE_NEWS = "sourceNewsFragment"
 
 //API response codes
 const val SUCCESS = 200

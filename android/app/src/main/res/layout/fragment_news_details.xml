@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/newsBannerImg"
+        android:src="@android:drawable/ic_menu_report_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/articleTitle"
+        android:textSize="19sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/newsBannerImg"/>
+
+    <TextView
+        android:id="@+id/sourceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/source"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/articleTitle"
+        app:layout_constraintTop_toBottomOf="@+id/articleTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsSource"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@id/sourceTitle"
+        app:layout_constraintTop_toTopOf="@id/sourceTitle"
+        app:layout_constraintBottom_toBottomOf="@id/sourceTitle"/>
+
+    <TextView
+        android:id="@+id/authorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/articleTitle"
+        app:layout_constraintTop_toBottomOf="@id/sourceTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsAuthor"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@id/authorTitle"
+        app:layout_constraintTop_toTopOf="@id/authorTitle"
+        app:layout_constraintBottom_toBottomOf="@id/authorTitle"/>
+
+    <TextView
+        android:id="@+id/descTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desc"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/authorTitle"
+        app:layout_constraintTop_toBottomOf="@id/authorTitle" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsDesc"
+        android:textSize="14sp"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@id/descTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/descTitle" />
+
+    <TextView
+        android:id="@+id/contentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/descTitle"
+        app:layout_constraintTop_toBottomOf="@id/newsDesc" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsContent"
+        android:textSize="14sp"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@id/contentTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/contentTitle" />
+
+    <TextView
+        android:id="@+id/urlTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/url"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/contentTitle"
+        app:layout_constraintTop_toBottomOf="@id/newsContent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsUrl"
+        android:textSize="14sp"
+        android:gravity="left"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@id/urlTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/urlTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

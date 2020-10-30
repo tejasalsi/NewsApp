@@ -3,4 +3,10 @@
     <string name="sources">Sources</string>
     <string name="all_news">All News</string>
     <string name="no_content_available">No Content available</string>
+    <string name="source">Source: </string>
+    <string name="author">"Author: "</string>
+    <string name="desc">Description: </string>
+    <string name="content">"Content: "</string>
+    <string name="url">"URL: "</string>
+    <string name="na">NA</string>
 </resources>

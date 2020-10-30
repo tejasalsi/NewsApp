@@ -11,6 +11,7 @@ import com.news.newsapp.base.BaseFragment
 import com.news.newsapp.model.AllNewsResponse
 import com.news.newsapp.model.SourcesResponse
 import com.news.newsapp.utils.PaginationScrollListener
+import com.news.newsapp.utils.SOURCE_NEWS
 import kotlinx.android.synthetic.main.fragment_allnews.*
 import retrofit2.Response
 import javax.inject.Inject
@@ -63,6 +64,7 @@ class SourceNewsFragment: BaseFragment<HomeViewModel>(), HomeNavigator {
     }
 
     override fun setupViews() {
+        allNewsAdapter.comingFrom(SOURCE_NEWS)
         layoutManager = LinearLayoutManager(requireContext())
         allNewsRecyclerView.layoutManager = layoutManager
         allNewsRecyclerView.adapter = allNewsAdapter
