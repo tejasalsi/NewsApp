@@ -19,7 +19,8 @@ interface APIHelper {
     @GET
     fun getHeadLines(
         @Url url: String,
-        @Query("sources") source: String
+        @Query("sources") source: String,
+        @Query("page") page: Int
     ): Observable<Response<AllNewsResponse>>
 
     @GET

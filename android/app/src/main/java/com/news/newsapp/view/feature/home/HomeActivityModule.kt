@@ -23,4 +23,9 @@ class HomeActivityModule {
     fun provideNewsAdapter(dataManager: DataManager): AllNewsAdapter {
         return AllNewsAdapter(dataManager, dataManager.context)
     }
+
+    @Provides
+    fun provideSourceNewsAdapter(dataManager: DataManager): SourceNewsAdapter {
+        return SourceNewsAdapter(dataManager, dataManager.context)
+    }
 }

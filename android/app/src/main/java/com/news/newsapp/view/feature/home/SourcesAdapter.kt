@@ -6,6 +6,7 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.news.newsapp.R
 import com.news.newsapp.data.manager.DataManager
@@ -32,6 +33,11 @@ class SourcesAdapter(dataManager: DataManager, context: Context): RecyclerView.A
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(mSources[position].url))
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             mContext.startActivity(intent)
+        }
+
+        holder.itemView.setOnClickListener{
+            val action = SourcesFragmentDirections.sourceToSourceNews(mSources[position].name)
+            it.findNavController().navigate(action)
         }
     }
 

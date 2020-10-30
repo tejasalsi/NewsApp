@@ -45,4 +45,17 @@ class HomeViewModel(dataManager: DataManager, schedulerProvider: SchedulerProvid
             //Do error handling
         }))
     }
+
+    fun getHeadlines(source: String, page: Int) {
+        compositeDisposable.add(dataManager.apiService.getHeadLines(source, page).subscribeOn(schedulerProvider.io()).observeOn(schedulerProvider.ui()).subscribe({
+                newsResponse ->
+            if(newsResponse.code() == SUCCESS) {
+                homeNavigator!!.newsResult(newsResponse)
+            }
+
+        }, {
+                error ->
+            //Do error handling
+        }))
+    }
 }

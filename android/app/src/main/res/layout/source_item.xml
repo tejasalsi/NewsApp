@@ -25,9 +25,9 @@
         android:layout_marginRight="15dp"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/sourceName"
+        app:layout_constraintBottom_toBottomOf="@id/sourceUrl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sourceName"
+        app:layout_constraintTop_toTopOf="@id/sourceUrl"
         tools:text="general" />
 
     <TextView
@@ -37,7 +37,8 @@
         android:textColor="@android:color/black"
         android:textSize="14sp"
         android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/categoryTxt"
+        android:layout_marginRight="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/nxtImg"
         app:layout_constraintStart_toStartOf="@+id/sourceName"
         app:layout_constraintTop_toBottomOf="@+id/sourceName"
         tools:text="Some random text" />
@@ -52,6 +53,16 @@
         app:layout_constraintStart_toStartOf="@+id/sourceDesc"
         app:layout_constraintTop_toBottomOf="@+id/sourceDesc"
         tools:text="something.com" />
+
+    <ImageView
+        android:id="@+id/nxtImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_farward_arrow"
+        android:layout_marginRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:layout_width="0dp"

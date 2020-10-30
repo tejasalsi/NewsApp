@@ -12,4 +12,7 @@ abstract class HomeFragmentProvider {
     @ContributesAndroidInjector(modules = [HomeActivityModule::class])
     abstract fun bindAllNewsFragment(): AllNewsFragment
 
+    @ContributesAndroidInjector(modules = [HomeActivityModule::class])
+    abstract fun bindSourceNewsAdapter(): SourceNewsFragment
+
 }

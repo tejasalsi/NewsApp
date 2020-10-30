@@ -9,12 +9,28 @@
         android:id="@+id/sourcesFragment"
         android:label="SourcesFragment"
         android:name="com.news.newsapp.view.feature.home.SourcesFragment"
-        tools:layout="@layout/fragment_sources"/>
+        tools:layout="@layout/fragment_sources">
+        <action
+            android:id="@+id/sourceToSourceNews"
+            app:destination="@id/sourceNewsFragment" />
+    </fragment>
 
     <fragment
         android:name="com.news.newsapp.view.feature.home.AllNewsFragment"
         android:id="@+id/allNewsFragment"
         android:label="AllNewsFragment"
         tools:layout="@layout/fragment_allnews"/>
+
+    <fragment
+        android:id="@+id/sourceNewsFragment"
+        tools:layout="@layout/fragment_allnews"
+        android:name="com.news.newsapp.view.feature.home.SourceNewsFragment"
+        android:label="SourceNewsFragment" >
+        <argument
+            android:name="sourceName"
+            android:defaultValue=""
+            app:nullable="false"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
