@@ -9,4 +9,11 @@
     <string name="content">"Content: "</string>
     <string name="url">"URL: "</string>
     <string name="na">NA</string>
+    <string name="red_txt">RED</string>
+    <string name="orange_txt">ORANGE</string>
+    <string name="yellow_txt">YELLOW</string>
+    <string name="green_txt">GREEN</string>
+    <string name="blue_txt">BLUE</string>
+    <string name="indigo_txt">INDIGO</string>
+    <string name="violet_txt">VIOLET</string>
 </resources>
